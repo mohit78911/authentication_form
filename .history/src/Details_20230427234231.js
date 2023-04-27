@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 export default function Details() {
+ 
   const [loginData, setLoginData] = useState([]);
   console.log(loginData);
+  
 
   const getDetails = () => {
     const getUser = localStorage.getItem("mohitdata");
