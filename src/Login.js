@@ -54,9 +54,9 @@ function Login() {
           return el.email === email && el.password === password;
         });
         if (userlogin.length === 0) {
-          toast.error("Invalid Details", { position: "top-center" });
+          toast.error("Invalid Details",{position:"top-center"});
         } else {
-          console.log("Successfull user Login ");
+          console.log("Successfull user Login " );
           history("/Details");
         }
       }
@@ -99,6 +99,7 @@ function Login() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

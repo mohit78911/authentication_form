@@ -17,11 +17,7 @@ function Home() {
   console.log(inpval);
 
   const getData = (e) => {
-    // console.log(e.target.value)
-
     const { value, name } = e.target;
-    // console.log(value)
-
     setInpval(() => {
       return {
         ...inpval,
@@ -32,8 +28,6 @@ function Home() {
 
   const addData = (e) => {
     e.preventDefault();
-
-    // console.log(inpval)
 
     const { name, email, date, password } = inpval;
 
@@ -60,6 +54,7 @@ function Home() {
           {/* first colum start */}
           <div className="col set">
             <br />
+            <h4 className="opa">Sing Up Form</h4>
             <br />
             <form>
               <TextField
@@ -93,7 +88,6 @@ function Home() {
                 className="m-1"
               />
               <br />
-
               <button onClick={addData} className="btn btn-primary m-2">
                 Submit
               </button>
@@ -114,7 +108,6 @@ function Home() {
           {/* second colum end */}
         </div>
       </div>
-
       <ToastContainer />
     </div>
   );

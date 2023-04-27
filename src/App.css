@@ -40,3 +40,56 @@
  .set{
   text-align: left;
  }
+
+ .round{
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.settext{
+  position: fixed;
+  position:absolute;
+top: 20%;
+left: 43%;
+}
+.opa{
+opacity: 0.5;
+margin-left: 6vh;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+.navStyle {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+.navStyle:hover{
+  color:rgb(135, 168, 78);
+}
+
+.align{
+  margin-top: 8px;
+}
+.floatleft{
+  float: left;
+  margin-left: 30px;
+}
+
+.floatright{
+  float: right;
+margin-right: 50px;
+}
+
+ .font{
+  font-family: 'Abel', sans-serif;
+  font-weight: 600;
+ }
