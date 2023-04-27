@@ -57,7 +57,7 @@ function Home() {
             <h4 className="opa">Sing Up Form</h4>
             <br />
             <form>
-              <TextField fullWidth
+              <TextField 
                 label="Enter Name"
                 type="text"
                 name="name"
@@ -65,7 +65,7 @@ function Home() {
                 className="m-1"
               />
               <br />
-              <TextField fullWidth
+              <TextField
                 label="Enter Email"
                 type="email"
                 name="email"
@@ -73,14 +73,14 @@ function Home() {
                 className="m-1"
               />
               <br />
-              <TextField fullWidth
+              <TextField
                 type="date"
                 name="date"
                 onChange={getData}
                 className="m-1"
               />
               <br />
-              <TextField fullWidth
+              <TextField
                 label="Enter Password"
                 type="password"
                 name="password"

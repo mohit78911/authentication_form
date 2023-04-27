@@ -73,14 +73,14 @@ function Home() {
                 className="m-1"
               />
               <br />
-              <TextField fullWidth
+              <TextField
                 type="date"
                 name="date"
                 onChange={getData}
                 className="m-1"
               />
               <br />
-              <TextField fullWidth
+              <TextField
                 label="Enter Password"
                 type="password"
                 name="password"

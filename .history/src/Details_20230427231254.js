@@ -16,23 +16,21 @@ export default function Details() {
 
   const birthday = () => {
     const getUser = localStorage.getItem("mohitdata");
-    if (getUser && getUser.length) {
-      const user = JSON.parse(getUser);
-      setLoginData(user);
+    // if (getUser && getUser.length) {
+    //   const user = JSON.parse(getUser);
+    //   setLoginData(user);
 
-      // const userBirth = loginData.map((el, k) => {
-      //   return el.date === todayDate;
-      // });
+    //   const userBirth = loginData.map((el, k) => {
+    //     return el.date === todayDate;
+    //   });
     //   if (userBirth) {
     //     setTimeout(() => {
     //       alert("Happy Birthday");
     //     }, 3000);
     //   }
-    }
+    // }
   };
- useEffect(()=>{
-  birthday()
- })
+ 
   return (
     <>
       <br />

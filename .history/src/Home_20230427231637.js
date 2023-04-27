@@ -80,7 +80,7 @@ function Home() {
                 className="m-1"
               />
               <br />
-              <TextField fullWidth
+              <TextField
                 label="Enter Password"
                 type="password"
                 name="password"

@@ -20,19 +20,20 @@ export default function Details() {
       const user = JSON.parse(getUser);
       setLoginData(user);
 
-      // const userBirth = loginData.map((el, k) => {
-      //   return el.date === todayDate;
-      // });
-    //   if (userBirth) {
-    //     setTimeout(() => {
-    //       alert("Happy Birthday");
-    //     }, 3000);
-    //   }
+      const userBirth = loginData.map((el, k) => {
+        return el.date === todayDate;
+      });
+      if (userBirth) {
+        setTimeout(() => {
+          alert("Happy Birthday");
+        }, 3000);
+      }
     }
   };
- useEffect(()=>{
-  birthday()
- })
+
+  useEffect(() => {
+    birthday();
+  }, []);
   return (
     <>
       <br />

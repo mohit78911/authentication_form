@@ -20,9 +20,9 @@ export default function Details() {
       const user = JSON.parse(getUser);
       setLoginData(user);
 
-      // const userBirth = loginData.map((el, k) => {
-      //   return el.date === todayDate;
-      // });
+      const userBirth = loginData.map((el, k) => {
+        return el.date === todayDate;
+      });
     //   if (userBirth) {
     //     setTimeout(() => {
     //       alert("Happy Birthday");
@@ -31,7 +31,7 @@ export default function Details() {
     }
   };
  useEffect(()=>{
-  birthday()
+  
  })
   return (
     <>
