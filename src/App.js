@@ -1,47 +1,21 @@
-import "./App.css";
-import { useState } from "react";
-import Home from "./Home";
-import { TextField,Button } from "@mui/material";
- 
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import Login from './Login'
+import Details from './Details'
+import Navbar from './Navbar'
 
-function App() {
-  const [edata, setEdata] = useState("");
-  const [pdata, setPdata] = useState("");
-
-  const getEmail = localStorage.getItem("EmailData");
-  const getPassword = localStorage.getItem("PasswordData");
-
-  const handleSubmit = () => {
-    localStorage.setItem("EmailData", edata);
-    localStorage.setItem("PasswordData", pdata);
-  };
+export default function App() {
   return (
-    <>
-    <br/>
-      {getEmail && getPassword ? (
-        <Home />
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <TextField className="m-3"
-            label="Email"
-            type="email"
-              value={edata}
-              onChange={(e) => setEdata(e.target.value)}/>
-             
-          </div>
-          <div>
-            <TextField label="Password" type="password"
-              value={pdata}
-              onChange={(e) => setPdata(e.target.value)}/>
-            
-          </div>
-          <button>Login</button>
-          <Button varient="outlined" onClick={()=>handleSubmit()}>Login</Button>
-        </form>
-      )}
-    </>
-  );
-}
+    <div>
+     <Navbar/>
+     <Routes>
+      
+      <Route path='/' element={<Home/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/details' element={<Details/>}/>
 
-export default App;
+     </Routes>
+    </div>
+  )
+}
