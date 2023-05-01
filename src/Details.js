@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Details() {
+
+  const location = useNavigate()
+  
   const [loginData, setLoginData] = useState([]);
   console.log(loginData);
 
@@ -12,16 +15,20 @@ export default function Details() {
       setLoginData(user);
     }
   };
+
+  const logOut = ()=>{
+    localStorage.removeItem("mohitdata")
+  }
   useEffect(() => {
     getDetails();
-  });
+  },[]);
   return (
     <>
       <br />
       <div>Welcome,Buddy</div>
       {loginData.length === 0 ? "error" : <h3>{loginData[0].name}</h3>}
       <br />
-      <NavLink className="btn btn-primary" to="/">
+      <NavLink className="btn btn-primary" onClick={()=>logOut()} to="/login" >
         LogOut
       </NavLink>
     </>

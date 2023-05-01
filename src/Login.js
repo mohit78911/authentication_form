@@ -1,7 +1,5 @@
-import userEvent from "@testing-library/user-event";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Details from "./Details";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { TextField } from "@mui/material";
@@ -14,7 +12,7 @@ function Login() {
     password: "",
   });
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   console.log(inpval);
 
   const getData = (e) => {
@@ -57,7 +55,7 @@ function Login() {
           toast.error("Invalid Details",{position:"top-center"});
         } else {
           console.log("Successfull user Login " );
-          history("/Details");
+           history("/Details");
         }
       }
     }
@@ -65,7 +63,7 @@ function Login() {
 
   return (
     <div>
-      <h3>Login Form</h3>
+      <h3 style={{opacity:"0.2",textDecoration:"underline"}}>Login Form</h3>
       <div className="container">
         <div className="row">
           <div className="col set">
@@ -94,7 +92,6 @@ function Login() {
           </div>
           <div className="col">
           <br/>
-
             <img src="https://media.tenor.com/GqtJYfEzi84AAAAC/undecided-thinking.gif" height={400} width={450}/>
           </div>
         </div>
